@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--<com.example.tr.instantcool2.IndicatorView.TopBarIndicatorView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:id="@+id/top_bar_container_fill_information">-->
+
+    <!--</com.example.tr.instantcool2.IndicatorView.TopBarIndicatorView>-->
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_below="@id/top_bar_container_fill_information"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<EditText-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:id="@+id/et_fill_information"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--android:drawableLeft="@mipmap/ic_launcher_round"-->
+            <!--android:drawablePadding="15dp"-->
+            <!--android:drawableStart="@mipmap/ic_launcher_round"-->
+            <!--android:hint="您的昵称"-->
+            <!--android:minHeight="40dp"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:singleLine="true" />-->
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_fill_information"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_marginLeft="2dp"-->
+            <!--android:layout_marginRight="2dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:background="@mipmap/ic_launcher"-->
+            <!--android:text="提交"-->
+            <!--android:textColor="#FFFFFFFF" />-->
+
+    <!--</LinearLayout>-->
+
+</RelativeLayout>

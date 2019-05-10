@@ -1,0 +1,25 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tr.instantcool2.Fragment.ChatFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.tr.instantcool2.IndicatorView.TopBarIndicatorView
+            android:id="@+id/topbar_container_chat_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+        </com.example.tr.instantcool2.IndicatorView.TopBarIndicatorView>
+
+        <ListView
+            android:layout_below="@id/topbar_container_chat_fragment"
+            android:id="@+id/lv_conversation_chat_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+    </RelativeLayout>
+
+</FrameLayout>

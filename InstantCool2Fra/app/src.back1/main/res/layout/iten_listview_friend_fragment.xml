@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.daimajia.swipe.SwipeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_item_friends_fragment"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout
+        android:tag="Bottom2"
+        android:background="#333"
+        android:layout_width="40dp"
+        android:gravity="center"
+        android:layout_height="120dp">
+        <ImageButton
+            android:src="@mipmap/ic_launcher_round"
+            android:id="@+id/btn_iten_delete_friend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- surface -->
+        <com.example.tr.instantcool2.IndicatorView.List_Item_FriendFragment_indicatorView
+            android:id="@+id/item_friend_fragment_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</com.daimajia.swipe.SwipeLayout>
+

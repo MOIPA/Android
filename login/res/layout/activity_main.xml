@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.login.MainActivity" >
+
+    <TextView
+        android:id="@+id/welcome"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="欢迎登陆" />
+    	
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户"
+        android:id="@+id/user"
+        android:layout_below="@id/welcome"
+        android:layout_marginTop="30dp"
+        />
+    <EditText 
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@id/user"
+        android:layout_width="match_parent"	
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:hint="请输入用户名"
+        />
+    <TextView 
+        android:layout_marginTop="20dp"
+		android:text="密码"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:id="@+id/pwd"
+		android:layout_below="@id/user"		
+        />
+
+    <EditText
+        android:layout_marginTop="10dp" 
+        android:layout_below="@id/username"
+        android:layout_toRightOf="@id/pwd"
+        android:layout_width="match_parent"	
+        android:layout_height="wrap_content"
+        android:id="@+id/userpassword"
+        android:password="true"
+        android:hint="请输入密码"
+        />
+    
+    <CheckBox 
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@id/pwd"
+        android:id="@+id/cb_remember"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="记住我"
+        />
+    <Button 
+        android:id="@+id/login"
+        android:layout_below="@id/userpassword"
+        android:layout_toRightOf="@id/cb_remember"
+        android:layout_marginTop="5dp"
+        android:text="登陆"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        />
+    <Button
+        android:id="@+id/regesiter" 
+        android:layout_below="@id/cb_remember"
+        android:layout_marginTop="5dp"
+        android:text="注册"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        />
+</RelativeLayout>

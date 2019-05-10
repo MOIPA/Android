@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<com.example.tr.instantcool2.IndicatorView.TopBarIndicatorView
+    android:id="@+id/top_bar_friend_info"
+    android:layout_height="56dp"
+    android:layout_width="match_parent"/>
+    <ImageView
+        android:layout_below="@id/top_bar_friend_info"
+        android:background="@mipmap/friend_info_top_bk"
+        android:id="@+id/iv_friend_info_top_bk"
+        android:layout_width="match_parent"
+        android:layout_height="180dp" />
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_below="@id/iv_friend_info_top_bk"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="-30dp"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:id="@+id/iv_friend_image_friend_info"
+        app:civ_border_width="2dp"
+        app:civ_border_color="#FFF"/>
+
+    <LinearLayout
+        android:id="@+id/ll_friend_info_content"
+        android:layout_below="@id/iv_friend_image_friend_info"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:id="@+id/ll_friendinfo_a"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:background="@mipmap/barrage"
+                    android:scaleType="centerInside"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+
+            <TextView
+                android:text="好友姓名："
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_friend_info_name"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View  android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#66CCFF"/>
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/ll_friendinfo_b"
+            android:layout_margin="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:background="@mipmap/barrage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+            <TextView
+                android:text="好友账号："
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_friend_info_account"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/ll_friend_info_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/shape"
+            android:text="发送信息"
+            android:textColor="#fff"
+            android:id="@+id/btn_friend_info_send_message"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:textColor="#fff"
+            android:background="@color/colorBlue"
+            android:visibility="gone"
+            android:text="添加为好友"
+            android:id="@+id/btn_friend_info_add_friend"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

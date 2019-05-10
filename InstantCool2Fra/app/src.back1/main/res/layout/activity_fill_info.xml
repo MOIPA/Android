@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tr.instantcool2.Activity.FillInfoActivity">
+
+    <com.example.tr.instantcool2.IndicatorView.TopBarIndicatorView
+        android:layout_width="368dp"
+        android:layout_height="56dp"
+        android:id="@+id/top_bar_container_fill_information"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+    </com.example.tr.instantcool2.IndicatorView.TopBarIndicatorView>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/top_bar_container_fill_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <EditText
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/et_fill_information"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@mipmap/accountfilling"
+            android:drawablePadding="15dp"
+            android:hint="您的昵称"
+            android:minHeight="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/et_fill_information_icon"
+            android:hint="您的iconid"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btn_fill_information"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="20dp"
+            android:text="提交"
+            android:textColor="#000" />
+
+    </LinearLayout>
+
+</RelativeLayout>

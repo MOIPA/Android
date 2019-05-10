@@ -1,0 +1,26 @@
+使用百度地图需要申请key
+http://lbsyun.baidu.com/apiconsole/key/create
+
+
+如果没有key
+1.先进入.android目录下；
+2.输入 keytool -genkey -v -keystore debug.keystore -alias androiddebugkey -keyalg RSA -validity 10000
+
+androidstudio中需要点击generateKey
+
+获得sha1
+
+切换到Android Studio后，如何查看呢？找了半天没找到。那就老办法命令行。
+第一步、打开Android Studio的Terminal
+第二步、输入命令：keytool -v -list -keystore keystore.jks
+【一定要记得加上 -v 参数，不然只能看到SHA1，没有MD5】
+【keystore.jks，需要替换为你自己的密钥所在路径和文件名】
+
+包名可以在清单文件中找到
+
+5C:34:9C:B4:67:5D:3A:73:7F:D2:ED:FF:07:A9:BD:35:24:C9:4E:B4;com.example.tr.baidumaplearn1
+
+
+问题：在androidstudio中 必须指定debug版本或者release版本的key，在projectStructure中Signing配置
+在BuildTypes中为两种方式添加key
+否则无法使用

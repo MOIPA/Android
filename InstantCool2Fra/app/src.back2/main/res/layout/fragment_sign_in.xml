@@ -1,0 +1,66 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.tr.instantcool2.Fragment.SignInFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.tr.instantcool2.IndicatorView.TopBarIndicatorView
+            android:id="@+id/topbar_container_sign_in"
+            android:layout_height="56dp"
+            android:layout_width="match_parent">
+
+        </com.example.tr.instantcool2.IndicatorView.TopBarIndicatorView>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_below="@id/topbar_container_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <!--android:background="@mipmap/ic_launcher_round"-->
+            <!--android:drawableLeft="@mipmap/ic_launcher_round"-->
+            <!--android:drawableStart="@mipmap/ic_launcher_round"-->
+            <!--android:hint="用户名/手机号"-->
+        <EditText
+            android:layout_margin="30dp"
+            android:id="@+id/et_sign_in_account"
+            android:drawableLeft="@mipmap/ic_launcher_round"
+            android:drawableStart="@mipmap/ic_launcher_round"
+            android:background="@mipmap/ic_launcher_round"
+            android:hint="用户名"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+            <EditText
+                android:singleLine="true"
+                android:layout_margin="30dp"
+                android:id="@+id/et_sign_in_pwd"
+                android:drawableLeft="@mipmap/ic_launcher_round"
+                android:drawableStart="@mipmap/ic_launcher_round"
+                android:background="@mipmap/ic_launcher_round"
+                android:hint="密码"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_sign_in_login"
+                android:text="Login"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/cb_sign_in_remember"
+                android:layout_marginRight="30dp"
+                android:layout_gravity="right"
+                android:text="记住我"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

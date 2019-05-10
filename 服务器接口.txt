@@ -1,0 +1,224 @@
+登陆：
+
+	http://39.108.159.175/phpworkplace/androidLogin/Login.php?name=&password=
+	http://39.108.159.175/phpworkplace/androidLogin/Login.php?name=唐锐&password=800
+
+	成功返回success
+
+查询登陆状态：
+	http://39.108.159.175/phpworkplace/androidLogin/CheckLoginStatus.php?name=
+	http://39.108.159.175/phpworkplace/androidLogin/CheckLoginStatus.php?name=testzzz
+	成功返回状态
+	1 已登陆 0 未登陆
+
+修改登陆状态：
+	
+	http://39.108.159.175/phpworkplace/androidLogin/SetUserStatus.php?name=&status=
+	http://39.108.159.175/phpworkplace/androidLogin/SetUserStatus.php?name=tr&status=0
+	成功返回success
+	1 已登陆 0 未登陆
+
+查询用户昵称：
+	
+	http://39.108.159.175/phpworkplace/androidLogin/GetNickName.php?name=
+	http://39.108.159.175/phpworkplace/androidLogin/GetNickName.php?name=tr
+	成功返回昵称
+	
+
+修改用户昵称：
+
+	http://39.108.159.175/phpworkplace/androidLogin/SetUserName.php?name=&nickname=
+	http://39.108.159.175/phpworkplace/androidLogin/SetUserName.php?name=tzq&nickname=汤子晴
+
+	成功返回success
+
+注册：
+
+	http://39.108.159.175/phpworkplace/androidLogin/Login.php?name=''&pwd=''
+	http://39.108.159.175/phpworkplace/androidLogin/Register.php?name=testzz&password=0800
+	
+	默认注册成功isLogin为1 （已登陆）
+	成功返回success
+	同名用户返回存在用户
+
+查询某人：
+	http://39.108.159.175/phpworkplace/androidLogin/SearchPerson.php?targetaccount=tr
+
+	成功返回xml流使用xmlpullpaser解析
+	<?xml version='1.0' encoding='UTF-8'?>
+	<contents>
+		<Friends>
+		<friendaccount>tr</friendaccount>
+		<friendname>唐锐</friendname>
+		</Friend>
+
+获取用户好友
+
+	http://39.108.159.175/phpworkplace/androidLogin/GetFriend.php?owner=
+	http://39.108.159.175/phpworkplace/androidLogin/GetFriend.php?owner=tr
+	
+	成功返回xml流使用xmlpullpaser解析
+	<?xml version='1.0' encoding='UTF-8'?>
+	<contents>
+		<Friends>
+		<friendaccount>tzq</friendaccount>
+		<friendname>tzq</friendname>
+		</Friends>
+	</contents>
+
+增加用户好友
+	
+	http://39.108.159.175/phpworkplace/androidLogin/SetFriend.php?owner=&friendaccount=&friendname=
+	http://39.108.159.175/phpworkplace/androidLogin/SetFriend.php?owner=唐锐&friendaccount=汤子晴&friendname=汤子晴
+
+	成功返回succeed
+
+添加会话：
+
+	http://39.108.159.175/phpworkplace/androidLogin/SetConversation.php?owner=&targetaccount=&targetname=
+	http://39.108.159.175/phpworkplace/androidLogin/SetConversation.php
+	?owner=tr&targetaccount=tzq&targetname=汤子晴
+	无返回值
+
+
+添加不重复会话
+	http://39.108.159.175/phpworkplace/androidLogin/InsertConversation.php?
+        owner=a&targetaccount=b&targetname=c
+
+删除会话：
+
+	http://39.108.159.175/phpworkplace/androidLogin/SetConversation.php?owner=&targetaccount=
+	http://39.108.159.175/phpworkplace/androidLogin/SetConversation.php?owner=tr&targetaccount=sx
+	无返回值
+
+查询会话：
+	
+	http://39.108.159.175/phpworkplace/androidLogin/GetConversation.php?owner=
+	返回：
+
+	
+	<?xml version='1.0'encoding='UTF-8?>
+	<contents>
+		<conversation>
+			<targetaccount>tzq</targetaccount>
+			<targetname></targetname>
+		</conversation>
+		<conversation>
+			<targetaccount>sx</targetaccount>
+			<targetname>ssx</targetname>
+		</conversation>
+	</contents>
+
+
+添加信息	
+
+	http://39.108.159.175/phpworkplace/androidLogin/TheSendMessage.php
+	?owner=&direct(int)=&targetaccount=&content=&isread=(int)&time=
+
+	http://39.108.159.175/phpworkplace/androidLogin/TheSendMessage.php
+	?owner=唐锐&direct=1&targetaccount=汤子晴&content=你好&isread=1&time=2017/10/16
+
+	成功返回succeed
+	
+
+查询信息
+
+	http://39.108.159.175/phpworkplace/androidLogin/GetTheMessage.php?info=唐锐
+	成功返回：
+	<?xml version='1.0' encoding='UTF-8'?>
+	<contents>
+		<message>
+			<time>2017、10、26</time>
+			<owner>唐锐</owner>
+			<direct>1</direct>
+			<targetaccount>汤子晴<targetaccount>
+			<content>你好<content>
+			<isread>1<isread>
+		</message>
+		<message>
+			<time>2017/10/16</time>
+			<owner>唐锐</owner>
+			<direct>1</direct>
+			<targetaccount>汤子晴<targetaccount>
+			<content>你好<content>
+			<isread>1<isread>
+		</message>
+	</contents>
+
+查询信息
+
+	http://39.108.159.175/phpworkplace/androidLogin/GetTheMessageASU.php?owner=唐锐&receiver=friendaccount
+	成功返回：
+	<?xml version='1.0' encoding='UTF-8'?>
+	<contents>
+		<message>
+			<time>2017、10、26</time>
+			<owner>唐锐</owner>
+			<direct>1</direct>
+			<targetaccount>汤子晴<targetaccount>
+			<content>你好<content>
+			<isread>1<isread>
+		</message>
+		<message>
+			<time>2017/10/16</time>
+			<owner>唐锐</owner>
+			<direct>1</direct>
+			<targetaccount>汤子晴<targetaccount>
+			<content>你好<content>
+			<isread>1<isread>
+		</message>
+	</contents>
+	
+修改信息为已读
+
+	http://39.108.159.175/phpworkplace/androidLogin/UpdateTheMessageUnreadCount.php?owner="+ UserInfoSotrage.Account+"&receiver="+friendaccount;
+	
+	返回值空
+
+查询消息未读总数量：
+
+	http://39.108.159.175/phpworkplace/androidLogin/GetTheMessageCount.php?receiver=tr
+
+	成功返回消息数量
+
+查询未读某人消息数量：
+
+	http://39.108.159.175/phpworkplace/androidLogin/GetTheMessageCountSingle.php?owner=tr&receiver=tzq
+
+	成功返回消息数量
+
+
+插入请求加为好友：
+
+	
+	http://39.108.159.175/phpworkplace/androidLogin/SendInvitation.php?inviter=tzq&targetaccount=sx&isagree=0
+
+
+查看是否有人请求加好友并且设置为已读：
+
+	http://39.108.159.175/phpworkplace/androidLogin/GetInvitation.php?receiver=sx
+
+
+	成功返回请求者的xml流
+	
+<?xml version='1.0' encoding='UTF-8'?>
+<root>
+	<invite>
+		<inviter>tr</inviter>
+	</invite>
+	<invite>
+		<inviter>sx</inviter>
+	</invite>
+</root>
+
+
+
+
+
+
+
+
+
+
+
+
